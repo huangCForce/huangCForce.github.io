@@ -124,7 +124,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
+                        <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
                     </div>
                 </section>
                 
@@ -184,6 +184,72 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-前端开发收藏" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/08/前端开发收藏/" class="article-date">
+      <time datetime="2016-09-08T08:19:35.000Z" itemprop="datePublished">2016-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/08/前端开发收藏/">前端开发收藏</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><blockquote>
+<p>素材<br><a href="http://www.dowebok.com/">dowebok</a><a href="http://www.jq22.com/">jquery插件库</a><a href="http://tympanus.net/codrops/">网页特效codrops</a><a href="http://www.bootcss.com/">bootstrap中文网</a><a href="http://www.jeasyui.net/">EasyUI</a><a href="http://www.getuikit.net/">UIKit</a></p>
+<p>字体库<br><a href="https://icomoon.io/">icomoon</a><a href="http://www.iconfont.cn/">阿里巴巴字体库</a></p>
+</blockquote>
+<hr>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/09/08/前端开发收藏/#more">(⊙o⊙)… >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Git学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -211,11 +277,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="初次运行-Git-前的配置"><a href="#初次运行-Git-前的配置" class="headerlink" title="初次运行 Git 前的配置"></a>初次运行 Git 前的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">**用户信息**</div><div class="line">git config --global user.name &quot;Tony Huang&quot;</div><div class="line">git config --global user.email huang690910789@gmail.com</div><div class="line"></div><div class="line">**文本编辑器**</div><div class="line">git config --global core.editor vim</div><div class="line"></div><div class="line">**差异分析工具**</div><div class="line">git config --global merge.tool vimdiff</div><div class="line"></div><div class="line">**查看配置信息**</div><div class="line">git config --list</div></pre></td></tr></table></figure>
-<h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">**创建版本库**</div><div class="line">git init</div><div class="line"></div><div class="line">**查看当前状态**</div><div class="line">git status</div><div class="line"></div><div class="line">**查看文件区别**</div><div class="line">git diff filename</div><div class="line"></div><div class="line">**把文件添加到版本库**</div><div class="line">git add filename</div><div class="line">git commit -m &quot;descript&quot;</div><div class="line"></div><div class="line">**版本回退**</div><div class="line">git log                         //查看提交历史</div><div class="line">git reflog                      //查看未来</div><div class="line">git reset --hard commit_id      //回到历史</div><div class="line">git checkout -- file            //撤销所有修改</div><div class="line">git rm file                     //删除文件</div><div class="line"></div><div class="line">**远程仓库**</div><div class="line">需在本机生成id_rsa.pub文件添加到github设置上，才可使用ssh，否则使用https</div><div class="line">git remote add origin git@server-name:path/repo-name.git        //关联一个远程库</div><div class="line">git push -u origin master                                       //关联第一次提交</div><div class="line">git push origin master                                          //推送最新修改</div><div class="line">git clone git@server-name:path/repo-name.git                    //克隆一个仓库</div></pre></td></tr></table></figure>
-<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**创建及管理分支**</div><div class="line">git branch              //查看分支</div><div class="line">git branch &lt;name&gt;       //创建分支</div><div class="line">git checkout &lt;name&gt;     //切换分支</div><div class="line">git checkout -b &lt;name&gt;  //创建+切换分支</div><div class="line">git merge &lt;name&gt;        //合并某分支到当前分支</div><div class="line">git branch -d &lt;name&gt;    //删除分支</div><div class="line"></div><div class="line">**解决冲突**</div><div class="line">手动修改后提交</div><div class="line">git log --graph         //查看分支合并图</div></pre></td></tr></table></figure>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git使用简易指南</a><br><a href="http://git.mydoc.io/" target="_blank" rel="external">码云平台帮助文档</a><br><a href="http://git.oschina.net/progit/" target="_blank" rel="external">Pro Git（中文版）</a><br><a href="https://www.atlassian.com/git/tutorials/" target="_blank" rel="external">英文版Tutorials</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">常用 Git 命令清单</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html" target="_blank" rel="external">Git 工作流程</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">常用 Git 命令清单</a><br><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">Git远程操作详解</a><br><a href="https://try.github.io/levels/1/challenges/1" target="_blank" rel="external">在线git学习</a><br><a href="http://igit.linuxtoy.org/contents.html" target="_blank" rel="external">沉浸式学 Git</a><br><a href="https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md" target="_blank" rel="external">GitHub的黑魔法大集合</a><br><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能懂的git入门</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰-Git教程</a></p>
-
+              <h3 id="初次运行-Git-前的配置"><a href="#初次运行-Git-前的配置" class="headerlink" title="初次运行 Git 前的配置"></a>初次运行 Git 前的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">**用户信息**</div><div class="line">git config --global user.name &quot;Tony Huang&quot;</div><div class="line">git config --global user.email huang690910789@gmail.com</div><div class="line"></div><div class="line">**文本编辑器**</div><div class="line">git config --global core.editor vim</div><div class="line"></div><div class="line">**差异分析工具**</div><div class="line">git config --global merge.tool vimdiff</div><div class="line"></div><div class="line">**查看配置信息**</div><div class="line">git config --list</div></pre></td></tr></table></figure>
+          
       
     </div>
     
@@ -228,6 +291,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/09/08/Git学习笔记/#more">(⊙o⊙)… >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
