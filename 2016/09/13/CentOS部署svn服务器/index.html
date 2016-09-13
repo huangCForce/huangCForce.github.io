@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git学习笔记 | CForce</title>
+  <title>CentOS部署svn服务器 | CForce</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x521D;&amp;#x6B21;&amp;#x8FD0;&amp;#x884C; Git &amp;#x524D;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;123456789101112**&amp;#x7528;&amp;#x6237;&amp;#x4FE1;&amp;#x606F;**git config --global user.name &amp;quot;Tony Huang&amp;quot;git config --global user.ema">
+  <meta name="description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git学习笔记">
-<meta property="og:url" content="http://huangcforce.github.io/2016/09/08/Git学习笔记/index.html">
+<meta property="og:title" content="CentOS部署svn服务器">
+<meta property="og:url" content="http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/index.html">
 <meta property="og:site_name" content="CForce">
-<meta property="og:description" content="&amp;#x521D;&amp;#x6B21;&amp;#x8FD0;&amp;#x884C; Git &amp;#x524D;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;123456789101112**&amp;#x7528;&amp;#x6237;&amp;#x4FE1;&amp;#x606F;**git config --global user.name &amp;quot;Tony Huang&amp;quot;git config --global user.ema">
-<meta property="og:updated_time" content="2016-09-08T10:04:14.420Z">
+<meta property="og:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
+<meta property="og:updated_time" content="2016-09-13T02:54:49.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git学习笔记">
-<meta name="twitter:description" content="&amp;#x521D;&amp;#x6B21;&amp;#x8FD0;&amp;#x884C; Git &amp;#x524D;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;123456789101112**&amp;#x7528;&amp;#x6237;&amp;#x4FE1;&amp;#x606F;**git config --global user.name &amp;quot;Tony Huang&amp;quot;git config --global user.ema">
+<meta name="twitter:title" content="CentOS部署svn服务器">
+<meta name="twitter:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
   
     <link rel="alternative" href="/atom.xml" title="CForce" type="application/atom+xml">
   
@@ -183,11 +183,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CentOS部署svn服务器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/08/Git学习笔记/" class="article-date">
-      <time datetime="2016-09-08T06:14:54.000Z" itemprop="datePublished">2016-09-08</time>
+      <a href="/2016/09/13/CentOS部署svn服务器/" class="article-date">
+      <time datetime="2016-09-13T02:47:51.000Z" itemprop="datePublished">2016-09-13</time>
 </a>
     </div>
   
@@ -200,7 +200,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git学习笔记
+      CentOS部署svn服务器
     </h1>
   
 
@@ -211,7 +211,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -221,11 +221,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="&#x521D;&#x6B21;&#x8FD0;&#x884C;-Git-&#x524D;&#x7684;&#x914D;&#x7F6E;"><a href="#&#x521D;&#x6B21;&#x8FD0;&#x884C;-Git-&#x524D;&#x7684;&#x914D;&#x7F6E;" class="headerlink" title="&#x521D;&#x6B21;&#x8FD0;&#x884C; Git &#x524D;&#x7684;&#x914D;&#x7F6E;"></a>&#x521D;&#x6B21;&#x8FD0;&#x884C; Git &#x524D;&#x7684;&#x914D;&#x7F6E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">**&#x7528;&#x6237;&#x4FE1;&#x606F;**</div><div class="line">git config --global user.name &quot;Tony Huang&quot;</div><div class="line">git config --global user.email huang690910789@gmail.com</div><div class="line"></div><div class="line">**&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;**</div><div class="line">git config --global core.editor vim</div><div class="line"></div><div class="line">**&#x5DEE;&#x5F02;&#x5206;&#x6790;&#x5DE5;&#x5177;**</div><div class="line">git config --global merge.tool vimdiff</div><div class="line"></div><div class="line">**&#x67E5;&#x770B;&#x914D;&#x7F6E;&#x4FE1;&#x606F;**</div><div class="line">git config --list</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="&#x57FA;&#x7840;&#x547D;&#x4EE4;"><a href="#&#x57FA;&#x7840;&#x547D;&#x4EE4;" class="headerlink" title="&#x57FA;&#x7840;&#x547D;&#x4EE4;"></a>&#x57FA;&#x7840;&#x547D;&#x4EE4;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">**&#x521B;&#x5EFA;&#x7248;&#x672C;&#x5E93;**</div><div class="line">git init</div><div class="line"></div><div class="line">**&#x67E5;&#x770B;&#x5F53;&#x524D;&#x72B6;&#x6001;**</div><div class="line">git status</div><div class="line"></div><div class="line">**&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x533A;&#x522B;**</div><div class="line">git diff filename</div><div class="line"></div><div class="line">**&#x628A;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x5E93;**</div><div class="line">git add filename</div><div class="line">git commit -m &quot;descript&quot;</div><div class="line"></div><div class="line">**&#x7248;&#x672C;&#x56DE;&#x9000;**</div><div class="line">git log                         //&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;</div><div class="line">git reflog                      //&#x67E5;&#x770B;&#x672A;&#x6765;</div><div class="line">git reset --hard commit_id      //&#x56DE;&#x5230;&#x5386;&#x53F2;</div><div class="line">git checkout -- file            //&#x64A4;&#x9500;&#x6240;&#x6709;&#x4FEE;&#x6539;</div><div class="line">git rm file                     //&#x5220;&#x9664;&#x6587;&#x4EF6;</div><div class="line"></div><div class="line">**&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;**</div><div class="line">&#x9700;&#x5728;&#x672C;&#x673A;&#x751F;&#x6210;id_rsa.pub&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;github&#x8BBE;&#x7F6E;&#x4E0A;&#xFF0C;&#x624D;&#x53EF;&#x4F7F;&#x7528;ssh&#xFF0C;&#x5426;&#x5219;&#x4F7F;&#x7528;https</div><div class="line">git remote add origin git@server-name:path/repo-name.git        //&#x5173;&#x8054;&#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x5E93;</div><div class="line">git push -u origin master                                       //&#x5173;&#x8054;&#x7B2C;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;</div><div class="line">git push origin master                                          //&#x63A8;&#x9001;&#x6700;&#x65B0;&#x4FEE;&#x6539;</div><div class="line">git clone git@server-name:path/repo-name.git                    //&#x514B;&#x9686;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;</div></pre></td></tr></table></figure>
-<h3 id="&#x5206;&#x652F;&#x7BA1;&#x7406;"><a href="#&#x5206;&#x652F;&#x7BA1;&#x7406;" class="headerlink" title="&#x5206;&#x652F;&#x7BA1;&#x7406;"></a>&#x5206;&#x652F;&#x7BA1;&#x7406;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**&#x521B;&#x5EFA;&#x53CA;&#x7BA1;&#x7406;&#x5206;&#x652F;**</div><div class="line">git branch              //&#x67E5;&#x770B;&#x5206;&#x652F;</div><div class="line">git branch &lt;name&gt;       //&#x521B;&#x5EFA;&#x5206;&#x652F;</div><div class="line">git checkout &lt;name&gt;     //&#x5207;&#x6362;&#x5206;&#x652F;</div><div class="line">git checkout -b &lt;name&gt;  //&#x521B;&#x5EFA;+&#x5207;&#x6362;&#x5206;&#x652F;</div><div class="line">git merge &lt;name&gt;        //&#x5408;&#x5E76;&#x67D0;&#x5206;&#x652F;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</div><div class="line">git branch -d &lt;name&gt;    //&#x5220;&#x9664;&#x5206;&#x652F;</div><div class="line"></div><div class="line">**&#x89E3;&#x51B3;&#x51B2;&#x7A81;**</div><div class="line">&#x624B;&#x52A8;&#x4FEE;&#x6539;&#x540E;&#x63D0;&#x4EA4;</div><div class="line">git log --graph         //&#x67E5;&#x770B;&#x5206;&#x652F;&#x5408;&#x5E76;&#x56FE;</div></pre></td></tr></table></figure>
-<h3 id="&#x5907;&#x6CE8;"><a href="#&#x5907;&#x6CE8;" class="headerlink" title="&#x5907;&#x6CE8;"></a>&#x5907;&#x6CE8;</h3><p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git&#x4F7F;&#x7528;&#x7B80;&#x6613;&#x6307;&#x5357;</a><br><a href="http://git.mydoc.io/" target="_blank" rel="external">&#x7801;&#x4E91;&#x5E73;&#x53F0;&#x5E2E;&#x52A9;&#x6587;&#x6863;</a><br><a href="http://git.oschina.net/progit/" target="_blank" rel="external">Pro Git&#xFF08;&#x4E2D;&#x6587;&#x7248;&#xFF09;</a><br><a href="https://www.atlassian.com/git/tutorials/" target="_blank" rel="external">&#x82F1;&#x6587;&#x7248;Tutorials</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">&#x5E38;&#x7528; Git &#x547D;&#x4EE4;&#x6E05;&#x5355;</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html" target="_blank" rel="external">Git &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;</a><br><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">&#x5E38;&#x7528; Git &#x547D;&#x4EE4;&#x6E05;&#x5355;</a><br><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">Git&#x8FDC;&#x7A0B;&#x64CD;&#x4F5C;&#x8BE6;&#x89E3;</a><br><a href="https://try.github.io/levels/1/challenges/1" target="_blank" rel="external">&#x5728;&#x7EBF;git&#x5B66;&#x4E60;</a><br><a href="http://igit.linuxtoy.org/contents.html" target="_blank" rel="external">&#x6C89;&#x6D78;&#x5F0F;&#x5B66; Git</a><br><a href="https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md" target="_blank" rel="external">GitHub&#x7684;&#x9ED1;&#x9B54;&#x6CD5;&#x5927;&#x96C6;&#x5408;</a><br><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">&#x7334;&#x5B50;&#x90FD;&#x80FD;&#x61C2;&#x7684;git&#x5165;&#x95E8;</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">&#x5ED6;&#x96EA;&#x5CF0;-Git&#x6559;&#x7A0B;</a></p>
+        <blockquote>
+<p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x522B;&#x7684;&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;svn&#x5E94;&#x8BE5;&#x662F;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x7528;&#x8FC7;&#x7684;&#xFF0C;&#x5728;&#x6B64;&#x4ECB;&#x7ECD;&#x72EC;&#x7ACB;&#x670D;&#x52A1;&#x5668;&#x7248;&#x672C;svn&#x7684;&#x90E8;&#x7F72;&#x73AF;&#x5883;<br>&#x5982;&#x679C;&#x662F;&#x5C40;&#x57DF;&#x7F51;&#x73AF;&#x5883;&#xFF0C;&#x5728;&#x914D;&#x597D;yum&#x672C;&#x5730;&#x6570;&#x636E;&#x6E90;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;yum&#x65B9;&#x5F0F;&#x5B89;&#x88C5;</p>
+</blockquote>
+<h3 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install subversion</div></pre></td></tr></table></figure>
+<h3 id="&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;"><a href="#&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;" class="headerlink" title="&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;"></a>&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">svnserve --version</div><div class="line">svn --help</div></pre></td></tr></table></figure>
+<h3 id="&#x914D;&#x7F6E;"><a href="#&#x914D;&#x7F6E;" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h3><ol>
+<li><p>&#x521B;&#x5EFA;&#x7248;&#x672C;&#x6A21;&#x677F;&#x5E93;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /opt/svnroot/SvnBlank</div><div class="line">svnadmin create /opt/svnroot/SvnBlank/</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6A21;&#x677F;&#x5E93;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/svnserve.conf</div><div class="line">#&#x533F;&#x540D;&#x7528;&#x6237;&#x65E0;&#x64CD;&#x4F5C;&#x6743;&#x9650;&#xFF0C;&#x6388;&#x6743;&#x7528;&#x6237;&#x53EF;&#x8BFB;&#x5199;&#xFF0C;&#x9879;&#x76EE;&#x8D26;&#x53F7;&#x4F7F;&#x7528;&#x5404;&#x81EA;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#xFF0C;&#x8D26;&#x53F7;&#x53E3;&#x4EE4;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x6587;&#x4EF6;</div><div class="line">anon-access = none</div><div class="line">auth-access = write</div><div class="line">#&#x5728;&#x8FD9;&#x91CC;&#x6A21;&#x677F;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5BF9;&#x9879;&#x76EE;&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;</div><div class="line">authz-db = authz</div><div class="line">#/&#x5404;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x7528;&#x6237;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x4FE1;&#x606F;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x4E00;&#x4EFD;</div><div class="line">password-db = /opt/svnroot/SvnBlank/conf/passwd</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x8D26;&#x53F7;&#x8BBE;&#x7F6E;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/passwd</div><div class="line">#&#x7528;&#x6237;&#x540D;=&#x5BC6;&#x7801;</div><div class="line">[users]</div><div class="line">huangchentao=123456</div><div class="line">admin=admin</div><div class="line">test=test</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"><a href="#&#x6743;&#x9650;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"></a>&#x6743;&#x9650;&#x8BBE;&#x7F6E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/authz</div><div class="line">#&#x9996;&#x5148;&#x5206;&#x7EC4;&#xFF0C;&#x7956;&#x540D;=&#x6210;&#x5458;1,&#x6210;&#x5458;2...</div><div class="line">#&#x5206;&#x76EE;&#x5F55;&#x6743;&#x9650; admin&#x7EC4;&#x5BF9;&#x6839;&#x76EE;&#x5F55;&#x6709;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF0C;trunk&#x76EE;&#x5F55;test&#x7EC4;&#x53EA;&#x6709;&#x8BFB;&#x7684;&#x6743;&#x9650;</div><div class="line">[groups]</div><div class="line">group_root=admin,huangchentao</div><div class="line">group_test=test</div><div class="line"></div><div class="line">[/]</div><div class="line">@group_root=rw</div><div class="line"></div><div class="line">[/trunk]</div><div class="line">@group_test=r</div></pre></td></tr></table></figure>
+<h3 id="&#x8FD0;&#x884C;"><a href="#&#x8FD0;&#x884C;" class="headerlink" title="&#x8FD0;&#x884C;"></a>&#x8FD0;&#x884C;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnserve -d -r /opt/svnroot/</div><div class="line">#&#x542F;&#x52A8;&#x591A;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x7AEF;&#x53E3;</div><div class="line">svnserve -d -r /opt/svnroot/ --listen-port 3391</div></pre></td></tr></table></figure>
+<h3 id="&#x505C;&#x6B62;"><a href="#&#x505C;&#x6B62;" class="headerlink" title="&#x505C;&#x6B62;"></a>&#x505C;&#x6B62;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps -ef | grep svnserver</div><div class="line">kill -9 process-id</div></pre></td></tr></table></figure>
+<h3 id="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"><a href="#&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;" class="headerlink" title="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"></a>&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat -anp | grep svnserve</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -234,13 +249,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/08/Git学习笔记/">Git学习笔记</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/13/CentOS部署svn服务器/">CentOS部署svn服务器</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 我为人人 的个人博客">我为人人</a></p>
-        <p><span>发布时间:</span>2016年09月08日 - 14时14分</p>
-        <p><span>最后更新:</span>2016年09月08日 - 18时04分</p>
+        <p><span>发布时间:</span>2016年09月13日 - 10时47分</p>
+        <p><span>最后更新:</span>2016年09月13日 - 10时54分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/08/Git学习笔记/" title="Git学习笔记">http://huangcforce.github.io/2016/09/08/Git学习笔记/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://huangcforce.github.io/2016/09/08/Git学习笔记/　　作者: 我为人人" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/13/CentOS部署svn服务器/" title="CentOS部署svn服务器">http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/　　作者: 我为人人" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -253,18 +268,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/08/前端开发收藏/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          前端开发收藏
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/08/flex布局/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flex布局</div>
+    <a href="/2016/09/13/CentOS下搭建一个可以分配权限的ftp服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS下搭建一个可以分配权限的ftp服务器</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -275,7 +281,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初次运行-Git-前的配置"><span class="toc-number">1.</span> <span class="toc-text">初次运行 Git 前的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支管理"><span class="toc-number">3.</span> <span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备注"><span class="toc-number">4.</span> <span class="toc-text">备注</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查-amp-amp-帮助"><span class="toc-number">2.</span> <span class="toc-text">检查&&帮助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#权限设置"><span class="toc-number">4.</span> <span class="toc-text">权限设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-number">5.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止"><span class="toc-number">6.</span> <span class="toc-text">停止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看使用端口"><span class="toc-number">7.</span> <span class="toc-text">查看使用端口</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -311,7 +317,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/08/Git学习笔记/" data-title="Git学习笔记" data-url="http://huangcforce.github.io/2016/09/08/Git学习笔记/"></div>
+    <div class="ds-thread" data-thread-key="2016/09/13/CentOS部署svn服务器/" data-title="CentOS部署svn服务器" data-url="http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -334,13 +340,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/08/前端开发收藏/" title="上一篇: 前端开发收藏">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/08/flex布局/" title="下一篇: flex布局">
+            <a href="/2016/09/13/CentOS下搭建一个可以分配权限的ftp服务器/" title="下一篇: CentOS下搭建一个可以分配权限的ftp服务器">
                 <i class="fa fa-angle-right"></i>
             </a>
         

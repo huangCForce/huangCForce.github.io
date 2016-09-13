@@ -124,7 +124,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/html5-flex/" style="font-size: 10px;">html5 flex</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                        <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/html5-flex/" style="font-size: 10px;">html5 flex</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
                     </div>
                 </section>
                 
@@ -183,6 +183,83 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-CentOS部署svn服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/13/CentOS部署svn服务器/" class="article-date">
+      <time datetime="2016-09-13T02:47:51.000Z" itemprop="datePublished">2016-09-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/13/CentOS部署svn服务器/">CentOS部署svn服务器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x522B;&#x7684;&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;svn&#x5E94;&#x8BE5;&#x662F;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x7528;&#x8FC7;&#x7684;&#xFF0C;&#x5728;&#x6B64;&#x4ECB;&#x7ECD;&#x72EC;&#x7ACB;&#x670D;&#x52A1;&#x5668;&#x7248;&#x672C;svn&#x7684;&#x90E8;&#x7F72;&#x73AF;&#x5883;<br>&#x5982;&#x679C;&#x662F;&#x5C40;&#x57DF;&#x7F51;&#x73AF;&#x5883;&#xFF0C;&#x5728;&#x914D;&#x597D;yum&#x672C;&#x5730;&#x6570;&#x636E;&#x6E90;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;yum&#x65B9;&#x5F0F;&#x5B89;&#x88C5;</p>
+</blockquote>
+<h3 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install subversion</div></pre></td></tr></table></figure>
+<h3 id="&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;"><a href="#&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;" class="headerlink" title="&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;"></a>&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">svnserve --version</div><div class="line">svn --help</div></pre></td></tr></table></figure>
+<h3 id="&#x914D;&#x7F6E;"><a href="#&#x914D;&#x7F6E;" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h3><ol>
+<li><p>&#x521B;&#x5EFA;&#x7248;&#x672C;&#x6A21;&#x677F;&#x5E93;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /opt/svnroot/SvnBlank</div><div class="line">svnadmin create /opt/svnroot/SvnBlank/</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6A21;&#x677F;&#x5E93;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/svnserve.conf</div><div class="line">#&#x533F;&#x540D;&#x7528;&#x6237;&#x65E0;&#x64CD;&#x4F5C;&#x6743;&#x9650;&#xFF0C;&#x6388;&#x6743;&#x7528;&#x6237;&#x53EF;&#x8BFB;&#x5199;&#xFF0C;&#x9879;&#x76EE;&#x8D26;&#x53F7;&#x4F7F;&#x7528;&#x5404;&#x81EA;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#xFF0C;&#x8D26;&#x53F7;&#x53E3;&#x4EE4;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x6587;&#x4EF6;</div><div class="line">anon-access = none</div><div class="line">auth-access = write</div><div class="line">#&#x5728;&#x8FD9;&#x91CC;&#x6A21;&#x677F;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5BF9;&#x9879;&#x76EE;&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;</div><div class="line">authz-db = authz</div><div class="line">#/&#x5404;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x7528;&#x6237;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x4FE1;&#x606F;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x4E00;&#x4EFD;</div><div class="line">password-db = /opt/svnroot/SvnBlank/conf/passwd</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x8D26;&#x53F7;&#x8BBE;&#x7F6E;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/passwd</div><div class="line">#&#x7528;&#x6237;&#x540D;=&#x5BC6;&#x7801;</div><div class="line">[users]</div><div class="line">huangchentao=123456</div><div class="line">admin=admin</div><div class="line">test=test</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"><a href="#&#x6743;&#x9650;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"></a>&#x6743;&#x9650;&#x8BBE;&#x7F6E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/authz</div><div class="line">#&#x9996;&#x5148;&#x5206;&#x7EC4;&#xFF0C;&#x7956;&#x540D;=&#x6210;&#x5458;1,&#x6210;&#x5458;2...</div><div class="line">#&#x5206;&#x76EE;&#x5F55;&#x6743;&#x9650; admin&#x7EC4;&#x5BF9;&#x6839;&#x76EE;&#x5F55;&#x6709;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF0C;trunk&#x76EE;&#x5F55;test&#x7EC4;&#x53EA;&#x6709;&#x8BFB;&#x7684;&#x6743;&#x9650;</div><div class="line">[groups]</div><div class="line">group_root=admin,huangchentao</div><div class="line">group_test=test</div><div class="line"></div><div class="line">[/]</div><div class="line">@group_root=rw</div><div class="line"></div><div class="line">[/trunk]</div><div class="line">@group_test=r</div></pre></td></tr></table></figure>
+<h3 id="&#x8FD0;&#x884C;"><a href="#&#x8FD0;&#x884C;" class="headerlink" title="&#x8FD0;&#x884C;"></a>&#x8FD0;&#x884C;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnserve -d -r /opt/svnroot/</div><div class="line">#&#x542F;&#x52A8;&#x591A;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x7AEF;&#x53E3;</div><div class="line">svnserve -d -r /opt/svnroot/ --listen-port 3391</div></pre></td></tr></table></figure>
+<h3 id="&#x505C;&#x6B62;"><a href="#&#x505C;&#x6B62;" class="headerlink" title="&#x505C;&#x6B62;"></a>&#x505C;&#x6B62;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps -ef | grep svnserver</div><div class="line">kill -9 process-id</div></pre></td></tr></table></figure>
+<h3 id="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"><a href="#&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;" class="headerlink" title="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"></a>&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat -anp | grep svnserve</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-CentOS下搭建一个可以分配权限的ftp服务器" class="article article-type-post" itemscope itemprop="blogPost">
   
