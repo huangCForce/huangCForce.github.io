@@ -211,27 +211,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
+              <blockquote>
 <p>&#x4E4B;&#x524D;&#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#x811A;&#x672C;&#xFF0C;&#x603B;&#x7ED3;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x628A;&#x6A21;&#x677F;&#x8D34;&#x51FA;&#x6765;</p>
 </blockquote>
-<ol>
-<li><p>&#x57FA;&#x7840;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line">#&#x683C;&#x5F0F;&#xFF1A;</div><div class="line">#&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">#0-59 0-23 1-31 1-12 0-7  command</div><div class="line">#&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x7684;8&#x65F6;30&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#30 8 */14 * * tar -jcf /opt/test_`date +%Y-%m-%d`.tar.gz /opt/backup/</div><div class="line">#</div><div class="line">#&#x6BCF;&#x5929;9&#x65F6;10&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#10 9 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;&#x5341;&#x4E8C;&#x5C0F;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#0 */12 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;30&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#*/30 * * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#* * * * * command</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x8BBE;&#x5B9A;&#xFF1A;crontab -e</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#x64CD;&#x4F5C;&#x7684;&#x6743;&#x9650;&#x6307;&#x5B9A;&#x7528;&#x6237;</div><div class="line">crontab -u username -e</div><div class="line">echo `date +%Y-%m-%d_%H:%M:%S`</div><div class="line">filename=test`date +%Y-%m-%d_%H:%M:%S`</div><div class="line">touch $filename</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x4E24;&#x5468;&#x6267;&#x884C;&#x4E00;&#x6B21;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">0-59 0-23 1-31 1-12 0-7  command</div><div class="line"></div><div class="line">&#x6BCF;&#x9694;14&#x5929;&#x7684;0&#x65F6;0&#x5206;&#x6267;&#x884C;command&#x6307;&#x4EE4;</div><div class="line">0 0 */14 * * command</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x538B;&#x7F29;&#x547D;&#x4EE4;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#tar -jcvf /home/test.tar.gz /home/test</div><div class="line">&#x4FEE;&#x6539;&#x7248;&#xFF1A;</div><div class="line">tar -jcf /home/test.tar.gz /home/test</div><div class="line"></div><div class="line">&#x603B;&#x7ED3;&#x547D;&#x4EE4;&#xFF1A;</div><div class="line">filename=test`date +%Y-%m-%d`.tar.gz</div><div class="line">tar -jcf /home/$filename /home/huang/test</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x6D4B;&#x8BD5;&#x6587;&#x6863;&#x5907;&#x4EFD;&#x65B9;&#x6848;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x6765;&#x6267;&#x884C;</div><div class="line">crontab -u huang -e</div><div class="line"></div><div class="line">#</div><div class="line">#&#x683C;&#x5F0F;&#xFF1A;</div><div class="line">#&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">#0-59 0-23 1-31 1-12 0-7  command</div><div class="line">#&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x7684;0&#x65F6;0&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#</div><div class="line"></div><div class="line">0 0 */14 * * tar -jcf /opt/ftp/temp_backup/temp_`date +%Y-%m-%d`.tar.gz /opt/backup/</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
+          
       
     </div>
     
@@ -244,6 +227,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/09/14/linux制定任务计划/#more">(⊙o⊙)… >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

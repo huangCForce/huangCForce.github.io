@@ -5,25 +5,16 @@
   
   <title>linux制定任务计划 | CForce</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;
-
-
-&amp;#x5">
+  <meta name="description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux制定任务计划">
 <meta property="og:url" content="http://huangcforce.github.io/2016/09/14/linux制定任务计划/index.html">
 <meta property="og:site_name" content="CForce">
-<meta property="og:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;
-
-
-&amp;#x5">
-<meta property="og:updated_time" content="2016-09-14T03:07:29.065Z">
+<meta property="og:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;">
+<meta property="og:updated_time" content="2016-09-14T03:19:40.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux制定任务计划">
-<meta name="twitter:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;
-
-
-&amp;#x5">
+<meta name="twitter:description" content="&amp;#x4E4B;&amp;#x524D;&amp;#x9879;&amp;#x76EE;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&amp;#x811A;&amp;#x672C;&amp;#xFF0C;&amp;#x603B;&amp;#x7ED3;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B;&amp;#xFF0C;&amp;#x628A;&amp;#x6A21;&amp;#x677F;&amp;#x8D34;&amp;#x51FA;&amp;#x6765;">
   
     <link rel="alternative" href="/atom.xml" title="CForce" type="application/atom+xml">
   
@@ -233,6 +224,7 @@
         <blockquote>
 <p>&#x4E4B;&#x524D;&#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#x811A;&#x672C;&#xFF0C;&#x603B;&#x7ED3;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x628A;&#x6A21;&#x677F;&#x8D34;&#x51FA;&#x6765;</p>
 </blockquote>
+<a id="more"></a>
 <ol>
 <li><p>&#x57FA;&#x7840;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line">#&#x683C;&#x5F0F;&#xFF1A;</div><div class="line">#&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">#0-59 0-23 1-31 1-12 0-7  command</div><div class="line">#&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x7684;8&#x65F6;30&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#30 8 */14 * * tar -jcf /opt/test_`date +%Y-%m-%d`.tar.gz /opt/backup/</div><div class="line">#</div><div class="line">#&#x6BCF;&#x5929;9&#x65F6;10&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#10 9 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;&#x5341;&#x4E8C;&#x5C0F;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#0 */12 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;30&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#*/30 * * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#* * * * * command</div></pre></td></tr></table></figure>
@@ -261,7 +253,7 @@
         <p><span>本文标题:</span><a href="/2016/09/14/linux制定任务计划/">linux制定任务计划</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 我为人人 的个人博客">我为人人</a></p>
         <p><span>发布时间:</span>2016年09月14日 - 11时02分</p>
-        <p><span>最后更新:</span>2016年09月14日 - 11时07分</p>
+        <p><span>最后更新:</span>2016年09月14日 - 11时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/14/linux制定任务计划/" title="linux制定任务计划">http://huangcforce.github.io/2016/09/14/linux制定任务计划/</a>
             <span class="copy-path" data-clipboard-text="原文: http://huangcforce.github.io/2016/09/14/linux制定任务计划/　　作者: 我为人人" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
