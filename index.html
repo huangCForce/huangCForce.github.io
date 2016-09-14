@@ -124,7 +124,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/html5-flex/" style="font-size: 10px;">html5 flex</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                        <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/html5-flex/" style="font-size: 10px;">html5 flex</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a>
                     </div>
                 </section>
                 
@@ -183,6 +183,83 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-linux制定任务计划" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/14/linux制定任务计划/" class="article-date">
+      <time datetime="2016-09-14T03:02:27.000Z" itemprop="datePublished">2016-09-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/14/linux制定任务计划/">linux制定任务计划</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>&#x4E4B;&#x524D;&#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#x811A;&#x672C;&#xFF0C;&#x603B;&#x7ED3;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x628A;&#x6A21;&#x677F;&#x8D34;&#x51FA;&#x6765;</p>
+</blockquote>
+<ol>
+<li><p>&#x57FA;&#x7840;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line">#&#x683C;&#x5F0F;&#xFF1A;</div><div class="line">#&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">#0-59 0-23 1-31 1-12 0-7  command</div><div class="line">#&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x7684;8&#x65F6;30&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#30 8 */14 * * tar -jcf /opt/test_`date +%Y-%m-%d`.tar.gz /opt/backup/</div><div class="line">#</div><div class="line">#&#x6BCF;&#x5929;9&#x65F6;10&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#10 9 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;&#x5341;&#x4E8C;&#x5C0F;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#0 */12 * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x9694;30&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#*/30 * * * * command</div><div class="line"></div><div class="line">#&#x6BCF;&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#* * * * * command</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x8BBE;&#x5B9A;&#xFF1A;crontab -e</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#x64CD;&#x4F5C;&#x7684;&#x6743;&#x9650;&#x6307;&#x5B9A;&#x7528;&#x6237;</div><div class="line">crontab -u username -e</div><div class="line">echo `date +%Y-%m-%d_%H:%M:%S`</div><div class="line">filename=test`date +%Y-%m-%d_%H:%M:%S`</div><div class="line">touch $filename</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x4E24;&#x5468;&#x6267;&#x884C;&#x4E00;&#x6B21;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">0-59 0-23 1-31 1-12 0-7  command</div><div class="line"></div><div class="line">&#x6BCF;&#x9694;14&#x5929;&#x7684;0&#x65F6;0&#x5206;&#x6267;&#x884C;command&#x6307;&#x4EE4;</div><div class="line">0 0 */14 * * command</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x538B;&#x7F29;&#x547D;&#x4EE4;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#tar -jcvf /home/test.tar.gz /home/test</div><div class="line">&#x4FEE;&#x6539;&#x7248;&#xFF1A;</div><div class="line">tar -jcf /home/test.tar.gz /home/test</div><div class="line"></div><div class="line">&#x603B;&#x7ED3;&#x547D;&#x4EE4;&#xFF1A;</div><div class="line">filename=test`date +%Y-%m-%d`.tar.gz</div><div class="line">tar -jcf /home/$filename /home/huang/test</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6D4B;&#x8BD5;&#x6587;&#x6863;&#x5907;&#x4EFD;&#x65B9;&#x6848;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x6765;&#x6267;&#x884C;</div><div class="line">crontab -u huang -e</div><div class="line"></div><div class="line">#</div><div class="line">#&#x683C;&#x5F0F;&#xFF1A;</div><div class="line">#&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x65E5;&#x671F;  &#x6708;&#x4EFD;  &#x5468;  &#x6307;&#x4EE4;</div><div class="line">#0-59 0-23 1-31 1-12 0-7  command</div><div class="line">#&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x7684;0&#x65F6;0&#x5206;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;</div><div class="line">#</div><div class="line"></div><div class="line">0 0 */14 * * tar -jcf /opt/ftp/temp_backup/temp_`date +%Y-%m-%d`.tar.gz /opt/backup/</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Linux笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -768,73 +845,10 @@
 
 
   
-    <article id="post-flex布局" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/09/08/flex布局/" class="article-date">
-      <time datetime="2016-09-08T04:40:00.000Z" itemprop="datePublished">2016-09-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/08/flex布局/">flex布局</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Flex-&#x5E03;&#x5C40;"><a href="#Flex-&#x5E03;&#x5C40;" class="headerlink" title="Flex &#x5E03;&#x5C40;"></a>Flex &#x5E03;&#x5C40;</h1><hr>
-<p>&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E3A;Flex&#x5E03;&#x5C40;<br>Flex&#x662F;Flexible Box&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x610F;&#x4E3A;&#x201D;&#x5F39;&#x6027;&#x5E03;&#x5C40;&#x201D;&#xFF0C;&#x7528;&#x6765;&#x4E3A;&#x76D2;&#x72B6;&#x6A21;&#x578B;&#x63D0;&#x4F9B;&#x6700;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box{</div><div class="line">    display: flex;</div><div class="line">}</div></pre></td></tr></table></figure></p>
-<ul>
-<li>&#x6CE8;&#x610F;&#xFF0C;&#x8BBE;&#x4E3A;Flex&#x5E03;&#x5C40;&#x4EE5;&#x540E;&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x7684;float&#x3001;clear&#x548C;vertical-align&#x5C5E;&#x6027;&#x5C06;&#x5931;&#x6548;</li>
-</ul>
-<hr>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-flex/">html5 flex</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/09/08/flex布局/#more">(⊙o⊙)… >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
