@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CentOS部署svn服务器 | CForce</title>
+  <title>Linux笔记 | CForce</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
+  <meta name="description" content="bash&amp;#x5FEB;&amp;#x6377;&amp;#x952E;12345678910Ctrl+A          &amp;#x5207;&amp;#x6362;&amp;#x5230;&amp;#x547D;&amp;#x4EE4;&amp;#x884C;&amp;#x5F00;&amp;#x59CB;(Home)                                     Ctrl+E          &amp;#x5207;&amp;#x6362;&amp;#x523">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS部署svn服务器">
-<meta property="og:url" content="http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/index.html">
+<meta property="og:title" content="Linux笔记">
+<meta property="og:url" content="http://huangcforce.github.io/2016/09/14/Linux笔记/index.html">
 <meta property="og:site_name" content="CForce">
-<meta property="og:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
-<meta property="og:updated_time" content="2016-09-13T02:56:29.167Z">
+<meta property="og:description" content="bash&amp;#x5FEB;&amp;#x6377;&amp;#x952E;12345678910Ctrl+A          &amp;#x5207;&amp;#x6362;&amp;#x5230;&amp;#x547D;&amp;#x4EE4;&amp;#x884C;&amp;#x5F00;&amp;#x59CB;(Home)                                     Ctrl+E          &amp;#x5207;&amp;#x6362;&amp;#x523">
+<meta property="og:updated_time" content="2016-09-14T02:51:41.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS部署svn服务器">
-<meta name="twitter:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4F01;&amp;#x4E1A;&amp;#x7EA7;&amp;#x522B;&amp;#x7684;&amp;#x4EE3;&amp;#x7801;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&amp;#xFF0C;svn&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x5F88;&amp;#x591A;&amp;#x4EBA;&amp;#x90FD;&amp;#x7528;&amp;#x8">
+<meta name="twitter:title" content="Linux笔记">
+<meta name="twitter:description" content="bash&amp;#x5FEB;&amp;#x6377;&amp;#x952E;12345678910Ctrl+A          &amp;#x5207;&amp;#x6362;&amp;#x5230;&amp;#x547D;&amp;#x4EE4;&amp;#x884C;&amp;#x5F00;&amp;#x59CB;(Home)                                     Ctrl+E          &amp;#x5207;&amp;#x6362;&amp;#x523">
   
     <link rel="alternative" href="/atom.xml" title="CForce" type="application/atom+xml">
   
@@ -183,11 +183,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-CentOS部署svn服务器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Linux笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/13/CentOS部署svn服务器/" class="article-date">
-      <time datetime="2016-09-13T02:47:51.000Z" itemprop="datePublished">2016-09-13</time>
+      <a href="/2016/09/14/Linux笔记/" class="article-date">
+      <time datetime="2016-09-14T02:45:22.000Z" itemprop="datePublished">2016-09-14</time>
 </a>
     </div>
   
@@ -200,7 +200,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS部署svn服务器
+      Linux笔记
     </h1>
   
 
@@ -221,27 +221,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x522B;&#x7684;&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;svn&#x5E94;&#x8BE5;&#x662F;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x7528;&#x8FC7;&#x7684;&#xFF0C;&#x5728;&#x6B64;&#x4ECB;&#x7ECD;&#x72EC;&#x7ACB;&#x670D;&#x52A1;&#x5668;&#x7248;&#x672C;svn&#x7684;&#x90E8;&#x7F72;&#x73AF;&#x5883;<br>&#x5982;&#x679C;&#x662F;&#x5C40;&#x57DF;&#x7F51;&#x73AF;&#x5883;&#xFF0C;&#x5728;&#x914D;&#x597D;yum&#x672C;&#x5730;&#x6570;&#x636E;&#x6E90;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;yum&#x65B9;&#x5F0F;&#x5B89;&#x88C5;</p>
-</blockquote>
-<h3 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install subversion</div></pre></td></tr></table></figure>
-<h3 id="&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;"><a href="#&#x68C0;&#x67E5;-amp-amp-&#x5E2E;&#x52A9;" class="headerlink" title="&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;"></a>&#x68C0;&#x67E5;&amp;&amp;&#x5E2E;&#x52A9;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">svnserve --version</div><div class="line">svn --help</div></pre></td></tr></table></figure>
+        <h3 id="bash&#x5FEB;&#x6377;&#x952E;"><a href="#bash&#x5FEB;&#x6377;&#x952E;" class="headerlink" title="bash&#x5FEB;&#x6377;&#x952E;"></a>bash&#x5FEB;&#x6377;&#x952E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Ctrl+A          &#x5207;&#x6362;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x5F00;&#x59CB;(Home)                                     </div><div class="line">Ctrl+E          &#x5207;&#x6362;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x672B;&#x5C3E;(End)</div><div class="line">Ctrl+L          &#x6E05;&#x9664;&#x5C4F;&#x5E55;&#x5185;&#x5BB9;</div><div class="line">Ctrl+U          &#x6E05;&#x9664;&#x526A;&#x5207;&#x5149;&#x6807;&#x524D;&#x7684;&#x5185;&#x5BB9;</div><div class="line">Ctrl+K          &#x6E05;&#x9664;&#x526A;&#x5207;&#x5149;&#x6807;&#x540E;&#x7684;&#x5185;&#x5BB9;</div><div class="line">Ctrl+Y          &#x7C98;&#x8D34;&#x521A;&#x5220;&#x9664;&#x7684;&#x5185;&#x5BB9;</div><div class="line">Ctrl+R          &#x5728;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x4E2D;&#x67E5;&#x627E;</div><div class="line">Ctrl+Z          &#x8F6C;&#x5165;&#x540E;&#x53F0;&#x8FD0;&#x884C;</div><div class="line">!!              &#x91CD;&#x590D;&#x6267;&#x884C;&#x6700;&#x540E;&#x4E00;&#x6761;&#x547D;&#x4EE4;</div><div class="line">!$              &#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x6700;&#x8FD1;&#x4E00;&#x6761;&#x53C2;&#x6570;</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="&#x914D;&#x7F6E;"><a href="#&#x914D;&#x7F6E;" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</h3><ol>
-<li><p>&#x521B;&#x5EFA;&#x7248;&#x672C;&#x6A21;&#x677F;&#x5E93;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /opt/svnroot/SvnBlank</div><div class="line">svnadmin create /opt/svnroot/SvnBlank/</div></pre></td></tr></table></figure>
+<h3 id="&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;"><a href="#&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" class="headerlink" title="&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;"></a>&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</h3><ul>
+<li><p>&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x5185;&#x6838;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">uname -a</div><div class="line">uname -r</div><div class="line">file /sbin/init</div><div class="line">    --&#x901A;&#x8FC7;file&#x547D;&#x4EE4;&#x5224;&#x65AD;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x65F6;32&#x4F4D;&#x8FD8;&#x662F;64&#x4F4D;&#x7684;</div><div class="line">    --64&#x4F4D;CPU&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;32&#x4F4D;&#x6216;64&#x4F4D;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x800C;32&#x4E3A;&#x7684;CPU&#x67B6;&#x6784;&#x53EA;&#x80FD;&#x5B89;&#x88C5;32&#x4F4D;&#x7684;&#x7CFB;&#x7EDF;</div></pre></td></tr></table></figure>
 </li>
-<li><p>&#x6A21;&#x677F;&#x5E93;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/svnserve.conf</div><div class="line">#&#x533F;&#x540D;&#x7528;&#x6237;&#x65E0;&#x64CD;&#x4F5C;&#x6743;&#x9650;&#xFF0C;&#x6388;&#x6743;&#x7528;&#x6237;&#x53EF;&#x8BFB;&#x5199;&#xFF0C;&#x9879;&#x76EE;&#x8D26;&#x53F7;&#x4F7F;&#x7528;&#x5404;&#x81EA;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#xFF0C;&#x8D26;&#x53F7;&#x53E3;&#x4EE4;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x6587;&#x4EF6;</div><div class="line">anon-access = none</div><div class="line">auth-access = write</div><div class="line">#&#x5728;&#x8FD9;&#x91CC;&#x6A21;&#x677F;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5BF9;&#x9879;&#x76EE;&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;</div><div class="line">authz-db = authz</div><div class="line">#/&#x5404;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x7528;&#x6237;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x4FE1;&#x606F;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;&#x4E00;&#x4EFD;</div><div class="line">password-db = /opt/svnroot/SvnBlank/conf/passwd</div></pre></td></tr></table></figure>
+<li><p>&#x67E5;&#x770B;&#x670D;&#x52A1;&#x5668;&#x4F7F;&#x7528;&#x7684;Linux&#x53D1;&#x884C;&#x7248;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x7248;&#x672C;&#x53F7;&#x53CA;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x7B49;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lsb_release -a</div><div class="line">    --&#x5982;&#x679C;&#x63D0;&#x793A;&#x547D;&#x4EE4;&#x65E0;&#x6548;&#x53EF;&#x901A;&#x8FC7; yum -y install redhat-lsb &#x5B89;&#x88C5;</div></pre></td></tr></table></figure>
 </li>
-<li><p>&#x8D26;&#x53F7;&#x8BBE;&#x7F6E;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/passwd</div><div class="line">#&#x7528;&#x6237;&#x540D;=&#x5BC6;&#x7801;</div><div class="line">[users]</div><div class="line">huangchentao=123456</div><div class="line">admin=admin</div><div class="line">test=test</div></pre></td></tr></table></figure>
+<li><p>&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">uptime</div><div class="line">    --&#x67E5;&#x770B;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;</div><div class="line">    --&#x8FC7;&#x53BB;&#x4E00;&#x5206;&#x949F;&#xFF0C;5&#x5206;&#x949F;&#xFF0C;&#x5341;&#x4E94;&#x5206;&#x949F;&#x5185;&#x8FDB;&#x7A0B;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x5E73;&#x5747;&#x8FDB;&#x7A0B;&#x6570;&#x91CF;</div><div class="line">w</div><div class="line">    --&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x5F53;&#x524D;&#x6709;&#x54EA;&#x4E9B;&#x7528;&#x6237;&#xFF0C;&#x5360;&#x7528;&#x54EA;&#x4E9B;&#x7EC8;&#x7AEF;</div><div class="line">top</div><div class="line">    --&#x67E5;&#x770B;&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#xFF0C;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;</div></pre></td></tr></table></figure>
 </li>
-</ol>
-<h3 id="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"><a href="#&#x6743;&#x9650;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x6743;&#x9650;&#x8BBE;&#x7F6E;"></a>&#x6743;&#x9650;&#x8BBE;&#x7F6E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">vim /opt/svnroot/SvnBlank/conf/authz</div><div class="line">#&#x9996;&#x5148;&#x5206;&#x7EC4;&#xFF0C;&#x7956;&#x540D;=&#x6210;&#x5458;1,&#x6210;&#x5458;2...</div><div class="line">#&#x5206;&#x76EE;&#x5F55;&#x6743;&#x9650; admin&#x7EC4;&#x5BF9;&#x6839;&#x76EE;&#x5F55;&#x6709;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF0C;trunk&#x76EE;&#x5F55;test&#x7EC4;&#x53EA;&#x6709;&#x8BFB;&#x7684;&#x6743;&#x9650;</div><div class="line">[groups]</div><div class="line">group_root=admin,huangchentao</div><div class="line">group_test=test</div><div class="line"></div><div class="line">[/]</div><div class="line">@group_root=rw</div><div class="line"></div><div class="line">[/trunk]</div><div class="line">@group_test=r</div></pre></td></tr></table></figure>
-<h3 id="&#x8FD0;&#x884C;"><a href="#&#x8FD0;&#x884C;" class="headerlink" title="&#x8FD0;&#x884C;"></a>&#x8FD0;&#x884C;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svnserve -d -r /opt/svnroot/</div><div class="line">#&#x542F;&#x52A8;&#x591A;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x7AEF;&#x53E3;</div><div class="line">svnserve -d -r /opt/svnroot/ --listen-port 3391</div></pre></td></tr></table></figure>
-<h3 id="&#x505C;&#x6B62;"><a href="#&#x505C;&#x6B62;" class="headerlink" title="&#x505C;&#x6B62;"></a>&#x505C;&#x6B62;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps -ef | grep svnserver</div><div class="line">kill -9 process-id</div></pre></td></tr></table></figure>
-<h3 id="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"><a href="#&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;" class="headerlink" title="&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;"></a>&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat -anp | grep svnserve</div></pre></td></tr></table></figure>
+<li><p>&#x67E5;&#x770B;&#x786C;&#x76D8;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fdisk -l</div><div class="line">    --&#x786C;&#x76D8;&#x53CA;&#x5206;&#x533A;&#x4FE1;&#x606F;</div><div class="line">df -h</div><div class="line">    --&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5360;&#x7528;&#x60C5;&#x51B5;</div><div class="line">iostat -d -x -k 1 10</div><div class="line">    --&#x67E5;&#x770B;&#x786C;&#x76D8;I/O&#x6027;&#x80FD;</div><div class="line">du -sh /root (--max-depth=1)</div><div class="line">    --&#x67E5;&#x770B;&#x67D0;&#x76EE;&#x5F55;&#x5927;&#x5C0F;</div><div class="line">du -chk * | sort -rn | head -n 10</div><div class="line">    --&#x67E5;&#x770B;&#x5206;&#x533A;&#x4F7F;&#x7528;&#x7387;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x67E5;&#x770B;CPU</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cat /proc/cpuinfo</div><div class="line">    --&#x67E5;&#x770B;cpu&#x4FE1;&#x606F;</div><div class="line">cat /proc/cpuinfo | grep &quot;cpu cores&quot; | uniq</div><div class="line">    --&#x6BCF;&#x4E2A;&#x7269;&#x7406;CPU&#x4E2D;core&#x7684;&#x4E2A;&#x6570;(&#x6838;&#x6570;)</div><div class="line">cat /proc/cpuinfo | grep &quot;processor&quot; | wc -l</div><div class="line">    --&#x903B;&#x8F91;CPU&#x4E2A;&#x6570;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x67E5;&#x770B;&#x5185;&#x5B58;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">free -m</div><div class="line">    --&#x67E5;&#x770B;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</div><div class="line">    --total&#x5185;&#x5B58;&#x603B;&#x6570;</div><div class="line">    --used&#x5DF2;&#x4F7F;&#x7528;&#x5185;&#x5B58;&#x6570;</div><div class="line">    --free&#x7A7A;&#x95F2;&#x5185;&#x5B58;&#x6570;</div><div class="line">    --shared&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x603B;&#x989D;</div><div class="line">    -- -buffers/cache&#x5DF2;&#x7528;&#x5185;&#x5B58;&#x6570;used-buffers-cached</div><div class="line">    -- +buffers/cache&#x53EF;&#x7528;&#x5185;&#x5B58;&#x6570;free+buffers+cached</div><div class="line">    --&#x53EF;&#x7528;&#x5185;&#x5B58;=free+buffers+cached</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -250,13 +251,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/09/13/CentOS部署svn服务器/">CentOS部署svn服务器</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/14/Linux笔记/">Linux笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 我为人人 的个人博客">我为人人</a></p>
-        <p><span>发布时间:</span>2016年09月13日 - 10时47分</p>
-        <p><span>最后更新:</span>2016年09月13日 - 10时56分</p>
+        <p><span>发布时间:</span>2016年09月14日 - 10时45分</p>
+        <p><span>最后更新:</span>2016年09月14日 - 10时51分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/09/13/CentOS部署svn服务器/" title="CentOS部署svn服务器">http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/　　作者: 我为人人" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/14/Linux笔记/" title="Linux笔记">http://huangcforce.github.io/2016/09/14/Linux笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://huangcforce.github.io/2016/09/14/Linux笔记/　　作者: 我为人人" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -269,18 +270,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/09/13/Centos-yum配置本地数据源/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Centos--yum配置本地数据源
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/13/CentOS下搭建一个可以分配权限的ftp服务器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS下搭建一个可以分配权限的ftp服务器</div>
+    <a href="/2016/09/13/Centos-yum配置本地数据源/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Centos--yum配置本地数据源</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -291,7 +283,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查-amp-amp-帮助"><span class="toc-number">2.</span> <span class="toc-text">检查&&帮助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#权限设置"><span class="toc-number">4.</span> <span class="toc-text">权限设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-number">5.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止"><span class="toc-number">6.</span> <span class="toc-text">停止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看使用端口"><span class="toc-number">7.</span> <span class="toc-text">查看使用端口</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bash快捷键"><span class="toc-number">1.</span> <span class="toc-text">bash快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看系统信息"><span class="toc-number">2.</span> <span class="toc-text">查看系统信息</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -327,7 +319,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/09/13/CentOS部署svn服务器/" data-title="CentOS部署svn服务器" data-url="http://huangcforce.github.io/2016/09/13/CentOS部署svn服务器/"></div>
+    <div class="ds-thread" data-thread-key="2016/09/14/Linux笔记/" data-title="Linux笔记" data-url="http://huangcforce.github.io/2016/09/14/Linux笔记/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -350,13 +342,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/13/Centos-yum配置本地数据源/" title="上一篇: Centos--yum配置本地数据源">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/09/13/CentOS下搭建一个可以分配权限的ftp服务器/" title="下一篇: CentOS下搭建一个可以分配权限的ftp服务器">
+            <a href="/2016/09/13/Centos-yum配置本地数据源/" title="下一篇: Centos--yum配置本地数据源">
                 <i class="fa fa-angle-right"></i>
             </a>
         
